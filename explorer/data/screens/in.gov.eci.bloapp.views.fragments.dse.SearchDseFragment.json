@@ -1,0 +1,1 @@
+{"id":"in.gov.eci.bloapp.views.fragments.dse.SearchDseFragment","shortName":"SearchDseFragment","kind":"fragment","layout":"blo_fragment_search_dse","title":"Search Dse Fragment","widgets":[{"kind":"text","label":"DSE","id":"textView3"},{"kind":"list","label":"search list dse rv","id":"search_list_dse_rv"}],"apiCalls":[],"returnsExtras":null,"onDeviceSdks":[]}

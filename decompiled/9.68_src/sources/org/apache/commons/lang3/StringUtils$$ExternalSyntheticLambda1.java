@@ -1,0 +1,12 @@
+package org.apache.commons.lang3;
+
+import java.util.function.Function;
+
+/* JADX INFO: compiled from: D8$$SyntheticClass */
+/* JADX INFO: loaded from: /tmp/dex_9.68/classes4.dex */
+public final /* synthetic */ class StringUtils$$ExternalSyntheticLambda1 implements Function {
+    @Override // java.util.function.Function
+    public final Object apply(Object obj) {
+        return StringUtils.toStringOrEmpty(obj);
+    }
+}

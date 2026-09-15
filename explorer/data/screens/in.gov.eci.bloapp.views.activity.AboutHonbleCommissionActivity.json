@@ -1,0 +1,1 @@
+{"id":"in.gov.eci.bloapp.views.activity.AboutHonbleCommissionActivity","shortName":"AboutHonbleCommissionActivity","kind":"activity","layout":"blo_activity_about_honble_commission","title":"About Honble Commission Activity","widgets":[{"kind":"text","label":"About Hon\u2019ble Commission","id":"title"}],"apiCalls":[],"returnsExtras":null,"onDeviceSdks":[]}

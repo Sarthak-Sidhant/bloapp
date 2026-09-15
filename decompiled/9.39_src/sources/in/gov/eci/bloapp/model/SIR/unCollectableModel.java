@@ -1,0 +1,59 @@
+package in.gov.eci.bloapp.model.SIR;
+
+import com.google.gson.annotations.SerializedName;
+import java.util.ArrayList;
+
+/* JADX INFO: loaded from: /tmp/dex_9.39/classes4.dex */
+public class unCollectableModel {
+
+    @SerializedName("acNo")
+    private int acNo;
+
+    @SerializedName("partNo")
+    private int partNo;
+
+    @SerializedName("stateCd")
+    private String stateCd;
+
+    @SerializedName("status")
+    private ArrayList<unCollectableStatus> unCollectableStatusArrayList;
+
+    public unCollectableModel(String stateCd, int acNo, int partNo, ArrayList<unCollectableStatus> unCollectableStatusArrayList) {
+        this.stateCd = stateCd;
+        this.acNo = acNo;
+        this.partNo = partNo;
+        this.unCollectableStatusArrayList = unCollectableStatusArrayList;
+    }
+
+    public String getStateCd() {
+        return this.stateCd;
+    }
+
+    public void setStateCd(String stateCd) {
+        this.stateCd = stateCd;
+    }
+
+    public int getAcNo() {
+        return this.acNo;
+    }
+
+    public void setAcNo(int acNo) {
+        this.acNo = acNo;
+    }
+
+    public int getPartNo() {
+        return this.partNo;
+    }
+
+    public void setPartNo(int partNo) {
+        this.partNo = partNo;
+    }
+
+    public ArrayList<unCollectableStatus> getUnCollectableStatusArrayList() {
+        return this.unCollectableStatusArrayList;
+    }
+
+    public void setUnCollectableStatusArrayList(ArrayList<unCollectableStatus> unCollectableStatusArrayList) {
+        this.unCollectableStatusArrayList = unCollectableStatusArrayList;
+    }
+}

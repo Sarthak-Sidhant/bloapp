@@ -1,0 +1,56 @@
+package in.gov.eci.bloapp.utils;
+
+/* JADX INFO: loaded from: /tmp/dex_9.68/classes4.dex */
+public class Constants {
+    public static final String AC_LIST_CODE = "accode";
+    public static final String AC_LIST_NAME = "acval";
+    public static final String COMPANY_NAME = "companyName";
+    public static final String CONTACT_NUMBER = "contactNumber";
+    public static final String COUNTRYNAME1 = "India";
+    public static final String COUNTRYNAME2 = "USA";
+    public static final String COUNTRYNAME2_LANG = "en";
+    public static final String DATE_FORMAT = "dateFormat";
+    public static final String DEPARTMENT = "department";
+    public static final String EMAIL_ID = "emailId";
+    public static final String END_DATE = "endDate";
+    public static final String FIRST_NAME = "firstName";
+    public static final String FOUND_CORRECT = "Claim verified and found correct";
+    public static final String FOUND_INCORRECT = "Claim verified and not found correct";
+    public static final String GRANDPARENT_MAPPING_LIST_CODE = "gpmapcode";
+    public static final String GRANDPARENT_MAPPING_LIST_NAME = "gpmapval";
+    public static final String HOME = "Home";
+    public static final String JOB_TITLE = "jobTitle";
+    public static final String LAST_NAME = "lastName";
+    public static final String LIST8_CODE = "list8code";
+    public static final String LIST8_NAME = "list8";
+    public static final String LISTITEM = "listitem";
+    public static final String LOCATION = "location";
+    public static final String MEETING = "Meeting";
+    public static final String PROFILE = "Profile";
+    public static final String PROFILE_PIC = "profilePic";
+    public static final String RELATIVE_LIST_CODE = "relcode";
+    public static final String RELATIVE_LIST_NAME = "relval";
+    public static final String RELATIVE_MAPPING_LIST_CODE = "relmapcode";
+    public static final String RELATIVE_MAPPING_LIST_NAME = "relmapval";
+    public static final int REQUEST_CODE_PERMISSIONS = 1000;
+    public static final String SETTINGS = "Settings";
+    public static final String SHARED_PREF_KEY = "in.gov.eci.bloapp.PREFERENCE_FILE_KEY";
+    public static final String SIR_YEAR_PROGENY = "2026";
+    public static final String SIR_YEAR_SELF = "2003";
+    public static final String START_DATE = "startDate";
+    public static final String STATE_LIST_CODE = "stcode";
+    public static final String STATE_LIST_NAME = "stval";
+    public static final String THUMBNAIL = "thumbnail";
+    public static final String TIME_FORMAT = "timeFormat";
+    public static final String TITLE = "title";
+    public static final String USER_AUTH_KEY = "userAuthKey";
+    public static final String somethingWentWrong = "Something went wrong. Please try again";
+    public static final String[] REQUIRED_PERMISSIONS = {"android.permission.CAMERA", "android.permission.RECORD_AUDIO"};
+    public static int FORM_PROCESSING_ID = 1;
+    public static int CURRENT_STATUS_ID = 4;
+    public static String transliterationName = "NAME";
+    public static String transliterationAddress = "ADDRESS";
+    public static int sectionFil = 0;
+    public static int h2hflag = 0;
+    public static int h2hflag2 = 0;
+}

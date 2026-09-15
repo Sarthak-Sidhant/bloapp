@@ -1,0 +1,1 @@
+{"id":"in.gov.eci.bloapp.views.activity.SplashActivity","shortName":"SplashActivity","kind":"activity","layout":"blo_activity_splash","title":"Splash Activity","widgets":[{"kind":"text","label":"BLO Module","id":"blo_module"}],"apiCalls":[],"returnsExtras":null,"onDeviceSdks":[]}

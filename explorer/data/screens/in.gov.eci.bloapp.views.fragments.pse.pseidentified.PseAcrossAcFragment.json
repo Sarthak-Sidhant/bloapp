@@ -1,0 +1,1 @@
+{"id":"in.gov.eci.bloapp.views.fragments.pse.pseidentified.PseAcrossAcFragment","shortName":"PseAcrossAcFragment","kind":"fragment","layout":"blo_fragment_pse_across_ac","title":"Pse Across Ac Fragment","widgets":[{"kind":"list","label":"all apps rv","id":"all_apps_rv"}],"apiCalls":[],"returnsExtras":null,"onDeviceSdks":[]}

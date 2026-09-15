@@ -1,0 +1,1 @@
+{"id":"in.gov.eci.bloapp.views.fragments.dse.DseFragment","shortName":"DseFragment","kind":"fragment","layout":"blo_fragment_dse","title":"Dse Fragment","widgets":[{"kind":"text","label":"Checklist Submission","id":"textView3"}],"apiCalls":[],"returnsExtras":null,"onDeviceSdks":[]}

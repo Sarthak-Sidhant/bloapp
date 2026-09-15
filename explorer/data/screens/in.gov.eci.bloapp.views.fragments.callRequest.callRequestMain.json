@@ -1,0 +1,1 @@
+{"id":"in.gov.eci.bloapp.views.fragments.callRequest.callRequestMain","shortName":"callRequestMain","kind":"activity","layout":"fragment_call_request_main","title":"call Request Main","widgets":[{"kind":"text","label":"Call Requests","id":"textView3"}],"apiCalls":[],"returnsExtras":null,"onDeviceSdks":[]}

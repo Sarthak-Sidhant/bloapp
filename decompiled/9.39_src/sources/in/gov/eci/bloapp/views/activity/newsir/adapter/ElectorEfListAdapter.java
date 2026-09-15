@@ -1,0 +1,84 @@
+package in.gov.eci.bloapp.views.activity.newsir.adapter;
+
+import android.content.Context;
+import android.content.Intent;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.recyclerview.widget.RecyclerView;
+import in.gov.eci.bloapp.R;
+import in.gov.eci.bloapp.views.activity.newsir.activity.FormVerification.FormVerificationActivity;
+import in.gov.eci.bloapp.views.activity.newsir.model.VerifyPayload;
+import java.util.ArrayList;
+import java.util.List;
+
+/* JADX INFO: loaded from: /tmp/dex_9.39/classes4.dex */
+public class ElectorEfListAdapter extends RecyclerView.Adapter<holder> {
+    List<VerifyPayload> al;
+    private Context context;
+    List<VerifyPayload> filteredAl;
+
+    public ElectorEfListAdapter(List<VerifyPayload> al, Context context) {
+        this.al = al;
+        this.context = context;
+        this.filteredAl = new ArrayList(al);
+    }
+
+    public holder onCreateViewHolder(ViewGroup viewGroup, int i) {
+        return new holder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.single_row_form_data, viewGroup, false));
+    }
+
+    public void onBindViewHolder(holder holder2, final int i) {
+        holder2.epic.setText(this.al.get(i).getEpicNo());
+        holder2.serialNo.setText(String.valueOf(this.al.get(i).getPartSerialNo()));
+        holder2.electorName.setText(this.al.get(i).getEpicName());
+        holder2.lv_category_type.setVisibility(8);
+        holder2.viewDetails.setOnClickListener(new View.OnClickListener() { // from class: in.gov.eci.bloapp.views.activity.newsir.adapter.ElectorEfListAdapter.1
+            @Override // android.view.View.OnClickListener
+            public void onClick(View view) {
+                Intent intent = new Intent(ElectorEfListAdapter.this.context, (Class<?>) FormVerificationActivity.class);
+                intent.putExtra("data", ElectorEfListAdapter.this.al.get(i));
+                intent.putExtra("from", "draft");
+                ElectorEfListAdapter.this.context.startActivity(intent);
+            }
+        });
+        holder2.uncollectable_pending_sir.setVisibility(8);
+    }
+
+    public int getItemCount() {
+        return this.al.size();
+    }
+
+    class holder extends RecyclerView.ViewHolder {
+        TextView acName;
+        TextView address;
+        LinearLayout cardViewLL;
+        TextView category_type_label;
+        TextView electorName;
+        TextView epic;
+        LinearLayout lv_category_type;
+        TextView serialNo;
+        TextView uncollectable_pending_sir;
+        TextView viewDetails;
+
+        public holder(View itemView) {
+            super(itemView);
+            this.electorName = (TextView) itemView.findViewById(R.id.electorName);
+            this.epic = (TextView) itemView.findViewById(R.id.epic);
+            this.serialNo = (TextView) itemView.findViewById(R.id.serialNo);
+            this.acName = (TextView) itemView.findViewById(R.id.acName);
+            this.category_type_label = (TextView) itemView.findViewById(R.id.category_type_label);
+            this.uncollectable_pending_sir = (TextView) itemView.findViewById(R.id.uncollectable_pending_sir);
+            this.viewDetails = (TextView) itemView.findViewById(R.id.viewDetails);
+            this.cardViewLL = (LinearLayout) itemView.findViewById(R.id.cardViewLL);
+            this.lv_category_type = (LinearLayout) itemView.findViewById(R.id.lv_category_type);
+        }
+    }
+
+    public void fun(ArrayList<VerifyPayload> filteredAl) {
+        this.al = filteredAl;
+        notifyDataSetChanged();
+    }
+}

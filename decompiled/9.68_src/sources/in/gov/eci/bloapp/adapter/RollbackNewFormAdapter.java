@@ -1,0 +1,94 @@
+package in.gov.eci.bloapp.adapter;
+
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import androidx.recyclerview.widget.RecyclerView;
+import in.gov.eci.bloapp.R;
+import in.gov.eci.bloapp.model.SIR.RollbackNewModel;
+import in.gov.eci.bloapp.views.activity.sir.UncollectableSIRold;
+import in.gov.eci.bloapp.views.activity.sir.enumerationForm.specialRevisionActivity;
+import java.util.ArrayList;
+
+/* JADX INFO: loaded from: /tmp/dex_9.68/classes4.dex */
+public class RollbackNewFormAdapter extends RecyclerView.Adapter<ViewHolder> {
+    private Context context;
+    ArrayList<RollbackNewModel> datalist;
+    ArrayList<RollbackNewModel> filteredAl;
+
+    public RollbackNewFormAdapter(ArrayList<RollbackNewModel> datalist, Context context) {
+        this.datalist = datalist;
+        this.context = context;
+        this.filteredAl = new ArrayList<>(datalist);
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        TextView EpicText;
+        TextView NameText;
+        TextView fillEF;
+        TextView remarks;
+        TextView serialText;
+        TextView uncollectable;
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+            this.EpicText = (TextView) itemView.findViewById(R.id.epic_pending_sir);
+            this.serialText = (TextView) itemView.findViewById(R.id.serialNo_pending_sir);
+            this.NameText = (TextView) itemView.findViewById(R.id.electorName_pending_sir);
+            this.remarks = (TextView) itemView.findViewById(R.id.remarks);
+            this.fillEF = (TextView) itemView.findViewById(R.id.fill_pending_sir);
+            this.uncollectable = (TextView) itemView.findViewById(R.id.uncollectable_pending_sir);
+        }
+    }
+
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int i) {
+        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.rollback_new_list_items, parent, false));
+    }
+
+    public void onBindViewHolder(ViewHolder viewHolder, int i) {
+        final RollbackNewModel rollbackNewModel = this.datalist.get(i);
+        viewHolder.EpicText.setText(rollbackNewModel.getEpicNo());
+        viewHolder.serialText.setText(rollbackNewModel.getSerialNo());
+        viewHolder.NameText.setText(rollbackNewModel.getName());
+        viewHolder.remarks.setText(rollbackNewModel.getRemarks());
+        Log.d("Adapter", "Binding" + rollbackNewModel.getEpicNo());
+        viewHolder.fillEF.setOnClickListener(new View.OnClickListener() { // from class: in.gov.eci.bloapp.adapter.RollbackNewFormAdapter.1
+            @Override // android.view.View.OnClickListener
+            public void onClick(View view) {
+                Intent intent = new Intent(RollbackNewFormAdapter.this.context, (Class<?>) specialRevisionActivity.class);
+                intent.putExtra("epic", rollbackNewModel.getEpicNo());
+                RollbackNewFormAdapter.this.context.startActivity(intent);
+            }
+        });
+        viewHolder.uncollectable.setOnClickListener(new View.OnClickListener() { // from class: in.gov.eci.bloapp.adapter.RollbackNewFormAdapter.2
+            @Override // android.view.View.OnClickListener
+            public void onClick(View view) {
+                Intent intent = new Intent(RollbackNewFormAdapter.this.context, (Class<?>) UncollectableSIRold.class);
+                intent.putExtra("epic", rollbackNewModel.getEpicNo());
+                intent.putExtra("psl", rollbackNewModel.getSerialNo());
+                intent.putExtra("epicId", rollbackNewModel.getEpicId());
+                intent.putExtra("flag", "RN");
+                intent.putExtra("photoUrl1", rollbackNewModel.getEfFrontUrl());
+                intent.putExtra("photoUrl2", rollbackNewModel.getEfBackUrl());
+                intent.putExtra("photoUrl3", rollbackNewModel.getSuppDoc1Url());
+                intent.putExtra("photoUrl4", rollbackNewModel.getSuppDoc2Url());
+                intent.putExtra("reason", rollbackNewModel.getUncollectableReason());
+                intent.putExtra("enrolledEpicNo", rollbackNewModel.getEnrolledEpicNo());
+                RollbackNewFormAdapter.this.context.startActivity(intent);
+            }
+        });
+    }
+
+    public void fun(ArrayList<RollbackNewModel> filteredAl) {
+        this.datalist = filteredAl;
+        notifyDataSetChanged();
+    }
+
+    public int getItemCount() {
+        return this.datalist.size();
+    }
+}

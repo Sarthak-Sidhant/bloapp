@@ -1,0 +1,1 @@
+{"id":"in.gov.eci.bloapp.views.fragments.pse.pseidentified.PseWithinPartFragment","shortName":"PseWithinPartFragment","kind":"fragment","layout":"blo_fragment_pse_within_part","title":"Pse Within Part Fragment","widgets":[{"kind":"list","label":"all apps rv","id":"all_apps_rv"}],"apiCalls":[],"returnsExtras":null,"onDeviceSdks":[]}

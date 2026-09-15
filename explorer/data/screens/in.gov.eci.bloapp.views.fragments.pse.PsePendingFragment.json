@@ -1,0 +1,1 @@
+{"id":"in.gov.eci.bloapp.views.fragments.pse.PsePendingFragment","shortName":"PsePendingFragment","kind":"fragment","layout":"blo_fragment_pse_pending","title":"Pse Pending Fragment","widgets":[{"kind":"list","label":"all apps rv","id":"all_apps_rv"}],"apiCalls":[],"returnsExtras":null,"onDeviceSdks":[]}

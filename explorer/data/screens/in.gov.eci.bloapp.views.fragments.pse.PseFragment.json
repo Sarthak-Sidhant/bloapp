@@ -1,0 +1,1 @@
+{"id":"in.gov.eci.bloapp.views.fragments.pse.PseFragment","shortName":"PseFragment","kind":"fragment","layout":"blo_fragment_pse","title":"Pse Fragment","widgets":[{"kind":"text","label":"Checklist Submission","id":"textView3"}],"apiCalls":[],"returnsExtras":null,"onDeviceSdks":[]}

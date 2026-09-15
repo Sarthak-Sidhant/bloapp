@@ -1,0 +1,27 @@
+# macOS system files
+.DS_Store
+*.DS_Store
+._*
+* copy*
+
+# Android binary packages and Dalvik bytecode (exceeds GitHub limits)
+*.apk
+*.xapk
+apks/
+base.apk
+extracted/*/dex/
+dex/
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# Local editor and IDE settings
+.idea/
+.vscode/
+*.swp
+*.swo

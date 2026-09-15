@@ -1,0 +1,1 @@
+{"id":"in.gov.eci.bloapp.views.activity.frs.ManualFaceCaptureActivity","shortName":"ManualFaceCaptureActivity","kind":"activity","layout":"activity_manual_face_capture","title":"Manual Face Capture Activity","widgets":[{"kind":"button","label":"Capture","id":"manual_capture_button"}],"apiCalls":[],"returnsExtras":["file_uri"],"onDeviceSdks":["Yoti Face Capture Module"]}

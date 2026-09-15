@@ -1,0 +1,1 @@
+{"id":"in.gov.eci.bloapp.views.fragments.pse.pseidentified.PseIdentifiedFragment","shortName":"PseIdentifiedFragment","kind":"fragment","layout":"blo_fragment_pse_identified","title":"Pse Identified Fragment","widgets":[{"kind":"text","label":"PSE Identified","id":"textView3"}],"apiCalls":[],"returnsExtras":null,"onDeviceSdks":[]}

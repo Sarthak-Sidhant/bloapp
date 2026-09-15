@@ -1,0 +1,57 @@
+package in.gov.eci.bloapp.utils;
+
+/* JADX INFO: loaded from: /tmp/dex_9.68/classes4.dex */
+public class RegexMatcher {
+    public static final String ADDRESS_OFFICIAL_REGEX = "^(?![0-9]*$)(?![-]*$)(?![']*$)(?![.]*$)(?![/]*$)(?![,]*$)[\\s\\da-zA-Z0-9\\-.,'/]+$";
+    public static final String CHECKLIST_MATCHER = "^\"|\"$";
+    public static final String DIGITS = "[\\d]";
+    public static final String EMAIL_REGEX = "^['_A-Za-z0-9-]+(\\.['_A-Za-z0-9-]+)*@([A-Za-z0-9-])+(\\.[A-Za-z0-9-]+)*((\\.[A-Za-z0-9]{2,})|(\\.[A-Za-z0-9]{2,}\\.[A-Za-z0-9]{2,}))$";
+    public static final String EPIC_NUMBER_REGEX = "/(^([a-zA-Z]){3}([0-9]){7}?$|^[a-zA-Z0-9]+(?:[\\/\\\\][a-zA-Z0-9]+)*$)|^([a-zA-Z]){3}([0-9]){7}?$|^[a-zA-Z0-9]+(?:[\\/\\\\][\\/\\\\][a-zA-Z0-9]+)*$/";
+    public static final String EPIC_REGEX = "^[A-Za-z0-9]+[\\/\\-]*[A-Za-z0-9\\/\\-]*$";
+    public static final String EPIC_REGEX_20_DIGIT = "^[A-Z]{3}[0-9]{7}$";
+    public static final String EPIC_REGEX_AADHAR = "^[A-Z]{3}[0-9]{7}$";
+    public static final String FAMILY_EPIC_REGEX = "^([a-zA-Z]){3}([0-9]){7}?$|^[a-zA-Z0-9]+(?:[\\/\\\\][a-zA-Z0-9]+)*$";
+    public static final String FAMILY_REGEX = "^[a-zA-Z\\s]+$";
+    public static final String FIRST_NAME_OFFICIAL_REGEX = "^(?![-]*$)(?![']*$)(?![.]*$)(?!\\\\[\\\\]*$)(?![,]*$)$";
+    public static final String FIRST_NAME_REGEX = "^[a-zA-Z\\s]+$";
+    public static final String HOUSENO_OFFICIAL_REGEX = "^(?![-]*$)(?![']*$)(?![.]*$)(?![/]*$)(?![,]*$)(?![:]*$)(?![;]*$)(?![\"]*$)(?![)]*$)(?![(]*$)(?![&]*$)[\\s\\da-zA-Z0-9\\-.,':;\"()&/]+$";
+    public static final String HOUSE_OFFICIAL_REGEX = ".*[~`!@#$%^&*()_+=₹©®℗™°℃℉«»⁅⁆¦|‹›?<>¶µ€£;\"{}\\[\\]].*";
+    public static final String HOUSE_REGEX = "^(?![-]*$)(?![']*$)(?![.]*$)(?!\\[\\]*$)(?![,]*$)[\\sa-zA-Z0-9\\-.,'()/]+$";
+    public static final String HOUSE_REGIONAL_REGEX = ".*[~`!@#$%^&*_+=₹©®℗™°℃℉«»⁅⁆¦|‹›?<>¶µ€£;\"{}\\[\\]].*";
+    public static final String JSON_STRING_REGEX = "\"";
+    public static final String MOBILE_REGEX = "^[6-9]{1}[0-9]{9}$";
+    public static final String NAME_NEW_OFFICIAL_REGEX = "^([a-zA-Z. ']*)$";
+    public static final String NAME_OFFICIAL = ".*[~`!@#$%^&*()_+=₹©®℗™°℃℉«»⁅⁆¦|‹›?<>¶µ€£;a-zA-Z0-9\"{}\\[\\]].*";
+    public static final String NAME_OFFICIAL_REGEX = "^([a-zA-Z ']*)$";
+    public static final String NAME_REGEX = "^(?![-]*$)(?![']*$)(?![.]*$)(?!\\[\\]*$)(?![,]*$)[\\sa-zA-Z\\-.,']+$";
+    public static final String NAME_REGEX_CHECK = ".*[a-zA-Z].*\"()";
+    public static final String OS_SPECIAL_CHARACTER = "(\\d+[.]\\d+)(.*)";
+    public static final String PASSPORT_REGEX = "^(?:[A-Z][0-9]{7}|[A-Z]{2}[0-9]{6})$";
+    public static final String PHONENUMBER_REGEX = "^[2-9]{1}[0-9]{3}\\s[0-9]{4}\\s[0-9]{4}$";
+    public static final String PINCODE_REGEX = "^[1-9]{1}[0-9]{5}$";
+    public static final String PIN_CODE_REGEX = "^[1-9]{1}[0-9]{5}$";
+    public static final String PLACE_REGEX = "^[a-zA-Z]+(?:[\\s-][a-zA-Z]+)*";
+    public static final String PLACE_REGEX2 = "^[a-zA-Z ]{1,50}$";
+    public static final String POSTOFFICE_OFFICIAL = ".*[~`!@#$%^&*()_+=₹©®℗™°℃℉«»⁅⁆¦|‹›?<>¶µ€£;\"{}\\[\\]].*";
+    public static final String POST_OFFICE_REGEX = "^(?![-]*$)(?![']*$)(?![.]*$)(?!\\[\\]*$)(?![,]*$)[\\sa-zA-Z0-9\\-.,']+$";
+    public static final String POST_OFFICE_REGIONAL_REGEX = ".*[~`!@#$%^&*()_+=₹©®℗™°℃℉«»⁅⁆¦|‹›?<>¶µ€£;0-9\"{}\\[\\]].*";
+    public static final String REFERENCE_NUMBER_REGEX = "^\"|\"$";
+    public static final String RELATIVE_NAME_REGEX = "^(?![-]*$)(?![']*$)(?![.]*$)(?!\\\\[\\\\]*$)(?![,]*$)$";
+    public static final String SPECIAL_CHARACTER = "[\"^(?=.*_)$&@]";
+    public static final String STREET_REGEX = "^(?![-]*$)(?![']*$)(?![.]*$)(?!\\[\\]*$)(?![,]*$)[\\sa-zA-Z0-9\\-.,']+$";
+    public static final String STREET_REGIONAL_REGEX = ".*[~`!@#$%^&*()_+=₹©®℗™°℃℉«»⁅⁆¦|‹›?<>¶µ€£;\"{}\\[\\]].*";
+    public static final String SURNAME_OFFICIAL_REGEX = ".*[~`!@#$%^&*()_+=₹©®℗™°℃℉«»⁅⁆¦|‹›?<>¶µ€£;0-9\"{}\\[\\]].*";
+    public static final String SURNAME_REGEX = "^[a-zA-Z\\s]+$";
+    public static final String TEHSIL_OFFICIAL = ".*[~`!@#$%^&*()_+=₹©®℗™°℃℉«»⁅⁆¦|‹›?<>¶µ€£;\"{}0-9\\[\\]].*";
+    public static final String TEHSIL_OFFICIAL_REGEX = ".*[~`!@#$%^&*()_+=₹©®℗™°℃℉«»⁅⁆¦|‹›?<>¶µ€£;\"{}\\[\\]].*";
+    public static final String TEHSIL_REGEX = "^(?![-]*$)(?![']*$)(?![.]+$)(?!\\[\\]*$)(?![,]+$)[\\sa-zA-Z0-9\\-.,']+$";
+    public static final String TEHSIL_REGIONAL_REGEX = ".*[~`!@#$%^&*()_+=₹©®℗™°℃℉«»⁅⁆¦|‹›?<>¶µ€£;0-9\"{}\\[\\]].*";
+    public static final String TOKEN_REGEX = "[^A-Za-z0-9.@, ]";
+    public static final String TOWN_REGEX = "^(?![-]*$)(?![']*$)(?![.]*$)(?!\\[\\]*$)(?![,]*$)[\\sa-zA-Z0-9\\-.,']+$";
+    public static final String TOWN_REGIONAL_REGEX = ".*[~`!@#$%^&*()_+=₹©®℗™°℃℉«»⁅⁆¦|‹›?<>¶µ€£;\"{}\\[\\]].*";
+    public static final String UPPERCASE = "[A-Z]";
+    public static final String VILLAGE_OFFICIAL_REGEX = ".*[~`!@#$%^&*()_+=₹©®℗™°℃℉«»⁅⁆¦|‹›?<>¶µ€£;\"{}\\[\\]].*";
+    public static final String VILLAGE_REGEX = "^(?![-]*$)(?![']*$)(?![.]*$)(?!\\[\\]*$)(?![,]*$)[\\sa-zA-Z0-9\\-.,']+$";
+    public static final String ZIP_REGEX = "^[A-Za-z0-9]{5}\\s[A-Za-z0-9]{3}$";
+    public static final String sectionNO_REGEX = "^(?:[1-9]|[1-9][0-9]{1,3}|9999)$";
+}

@@ -1,0 +1,1 @@
+{"id":"in.gov.eci.bloapp.views.activity.ContactDetailsofCEOsActivity","shortName":"ContactDetailsofCEOsActivity","kind":"activity","layout":"blo_activity_contact_detailsof_ceos","title":"Contact Detailsof CE Os Activity","widgets":[{"kind":"text","label":"Contact Details of CEOs","id":"title"}],"apiCalls":[],"returnsExtras":null,"onDeviceSdks":[]}

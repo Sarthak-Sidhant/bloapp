@@ -1,0 +1,1 @@
+{"id":"in.gov.eci.bloapp.views.fragments.faq.FAQsFragment","shortName":"FAQsFragment","kind":"fragment","layout":"blo_fragment_faqs","title":"FA Qs Fragment","widgets":[{"kind":"list","label":"fragment Booksearch Search Results Recycler View","id":"fragmentBooksearchSearchResultsRecyclerView"}],"apiCalls":[],"returnsExtras":null,"onDeviceSdks":[]}

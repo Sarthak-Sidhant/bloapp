@@ -1,0 +1,1 @@
+{"id":"in.gov.eci.bloapp.views.fragments.dse.generateform8.DseIdentifiedFragment","shortName":"DseIdentifiedFragment","kind":"fragment","layout":"blo_fragment_dse_identified","title":"Dse Identified Fragment","widgets":[{"kind":"text","label":"DSE Identified","id":"textView3"}],"apiCalls":[],"returnsExtras":null,"onDeviceSdks":[]}

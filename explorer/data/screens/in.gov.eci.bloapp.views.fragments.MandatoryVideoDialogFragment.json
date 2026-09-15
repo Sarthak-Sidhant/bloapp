@@ -1,0 +1,1 @@
+{"id":"in.gov.eci.bloapp.views.fragments.MandatoryVideoDialogFragment","shortName":"MandatoryVideoDialogFragment","kind":"fragment","layout":"dialog_mandotry_video","title":"Mandatory Video Dialog Fragment","widgets":[{"kind":"button","label":"Dismiss","id":"btnDismiss"}],"apiCalls":[],"returnsExtras":null,"onDeviceSdks":[]}

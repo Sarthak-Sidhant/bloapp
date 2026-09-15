@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BLO App Explorer</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">BLO</span>
+      <div>
+        <div class="brand-title">BLO App Explorer</div>
+        <div class="brand-sub">in.gov.eci.bloapp &middot; v9.39 &rarr; v9.68 &middot; offline, decompiled from public releases</div>
+      </div>
+    </div>
+    <nav class="tabs" id="tabs">
+      <button class="tab-btn active" data-tab="timeline">Timeline</button>
+      <button class="tab-btn" data-tab="features">Screens &amp; Features</button>
+      <button class="tab-btn" data-tab="flows">Flow Explorer</button>
+      <button class="tab-btn" data-tab="preview">Try the App</button>
+      <button class="tab-btn" data-tab="sdks">Embedded SDKs</button>
+      <button class="tab-btn" data-tab="compare">Compare Versions</button>
+      <button class="tab-btn" data-tab="search">Search</button>
+    </nav>
+  </header>
+
+  <main id="views">
+
+    <!-- TIMELINE -->
+    <section class="view" id="view-timeline">
+      <div class="panel-split">
+        <div class="panel-list" id="timeline-list"></div>
+        <div class="panel-detail" id="timeline-detail">
+          <div class="empty-state">Select a version on the left to see what changed.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="view" id="view-features" hidden>
+      <div class="toolbar">
+        <input type="search" id="feature-search" placeholder="Search screens / activities&hellip;" />
+        <select id="feature-module"></select>
+        <select id="feature-existence">
+          <option value="all">All screens</option>
+          <option value="present">Present in v9.68 (current)</option>
+          <option value="removed">Removed before v9.68</option>
+          <option value="launcher">Launcher / entry screens</option>
+        </select>
+        <span class="count-pill" id="feature-count"></span>
+      </div>
+      <div class="panel-split">
+        <div class="panel-list" id="feature-list"></div>
+        <div class="panel-detail" id="feature-detail">
+          <div class="empty-state">Pick a screen to see which versions include it and its full class name.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLOWS -->
+    <section class="view" id="view-flows" hidden>
+      <div class="toolbar">
+        <label class="inline-label">Version:
+          <select id="flow-version">
+            <option value="9.39">9.39 (baseline)</option>
+            <option value="9.68" selected>9.68 (latest)</option>
+          </select>
+        </label>
+        <label class="inline-label">Module:
+          <select id="flow-module"></select>
+        </label>
+        <input type="search" id="flow-search" placeholder="Filter node by name&hellip;" />
+        <span class="count-pill" id="flow-count"></span>
+      </div>
+      <div class="flow-layout">
+        <div class="flow-canvas-wrap">
+          <svg id="flow-svg"></svg>
+          <div class="flow-hint">Drag to reposition nodes &middot; click a node to inspect &middot; graph built from <code>startActivity</code>/fragment-transaction calls found in decompiled source.</div>
+        </div>
+        <div class="panel-detail" id="flow-detail">
+          <div class="empty-state">Click a node to see its incoming/outgoing navigation edges.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREVIEW -->
+    <section class="view" id="view-preview" hidden>
+      <div class="preview-layout">
+        <div class="preview-sidebar">
+          <div class="preview-banner">
+            <strong>No login, no backend.</strong> This reconstructs each screen's real fields, hints and choices
+            from the decompiled v9.68 layout XML. Nothing you type is sent anywhere &mdash; it's a static mock.
+          </div>
+          <div class="toolbar" style="margin-top:2px;">
+            <input type="search" id="preview-search" placeholder="Jump to any screen&hellip;" />
+          </div>
+          <div class="preview-quickstart" id="preview-quickstart"></div>
+          <div class="panel-list" id="preview-list" style="flex:1; width:auto;"></div>
+        </div>
+        <div class="preview-phone-wrap">
+          <div class="preview-crumbs" id="preview-crumbs"></div>
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen" id="phone-screen">
+              <div class="empty-state" style="padding:40px 20px;">Pick a screen on the left to start exploring &mdash; try &ldquo;Voter Forms&rdquo; or &ldquo;Enumeration Form&rdquo;.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SDK INVENTORY -->
+    <section class="view" id="view-sdks" hidden>
+      <div class="preview-banner" style="margin-bottom:12px;">
+        Third-party libraries embedded in v9.68, beyond the app's own code &mdash; what they are, what
+        native libraries / model files they ship, and whether we found any networking code in them.
+        Only <strong>Yoti Face Capture</strong> has been traced end-to-end and is marked verified; the
+        rest show raw signal rather than a verdict &mdash; see each card for caveats.
+      </div>
+      <div class="panel-split">
+        <div class="panel-list" id="sdk-list"></div>
+        <div class="panel-detail" id="sdk-detail">
+          <div class="empty-state">Pick a library on the left.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARE -->
+    <section class="view" id="view-compare" hidden>
+      <div class="toolbar">
+        <label class="inline-label">From: <select id="compare-from"></select></label>
+        <label class="inline-label">To: <select id="compare-to"></select></label>
+        <button id="compare-run">Compare</button>
+      </div>
+      <div id="compare-result"><div class="empty-state">Pick two versions and hit Compare to see the full accumulated diff between them.</div></div>
+    </section>
+
+    <!-- SEARCH -->
+    <section class="view" id="view-search" hidden>
+      <div class="toolbar">
+        <input type="search" id="global-search" placeholder="Search across screens and UI strings&hellip;" autofocus />
+        <span class="count-pill" id="search-count"></span>
+      </div>
+      <div id="search-result"></div>
+    </section>
+
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

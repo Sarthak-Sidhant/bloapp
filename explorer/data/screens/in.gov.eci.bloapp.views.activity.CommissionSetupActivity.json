@@ -1,0 +1,1 @@
+{"id":"in.gov.eci.bloapp.views.activity.CommissionSetupActivity","shortName":"CommissionSetupActivity","kind":"activity","layout":"blo_activity_commission_setup","title":"Commission Setup Activity","widgets":[{"kind":"text","label":"Commission Setup","id":"title"}],"apiCalls":[],"returnsExtras":null,"onDeviceSdks":[]}

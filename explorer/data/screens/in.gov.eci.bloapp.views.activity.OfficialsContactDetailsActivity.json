@@ -1,0 +1,1 @@
+{"id":"in.gov.eci.bloapp.views.activity.OfficialsContactDetailsActivity","shortName":"OfficialsContactDetailsActivity","kind":"activity","layout":"blo_activity_officials_contact_details","title":"Officials Contact Details Activity","widgets":[{"kind":"text","label":"Officials Contact Details","id":"title"}],"apiCalls":[],"returnsExtras":null,"onDeviceSdks":[]}

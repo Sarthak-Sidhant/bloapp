@@ -1,0 +1,1 @@
+{"id":"in.gov.eci.bloapp.views.fragments.DashBoardChartFragment","shortName":"DashBoardChartFragment","kind":"fragment","layout":"blo_fragment_dashboard_graph","title":"Dash Board Chart Fragment","widgets":[{"kind":"text","label":"STATISTICS OF RECEIVED FORMS","id":"textView"}],"apiCalls":[],"returnsExtras":null,"onDeviceSdks":[]}

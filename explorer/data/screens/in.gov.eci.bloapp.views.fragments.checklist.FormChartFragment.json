@@ -1,0 +1,1 @@
+{"id":"in.gov.eci.bloapp.views.fragments.checklist.FormChartFragment","shortName":"FormChartFragment","kind":"fragment","layout":"blo_fragment_forms_graph","title":"Form Chart Fragment","widgets":[{"kind":"text","label":"STATISTICS OF PENDING FORMS","id":"textView"}],"apiCalls":[],"returnsExtras":null,"onDeviceSdks":[]}

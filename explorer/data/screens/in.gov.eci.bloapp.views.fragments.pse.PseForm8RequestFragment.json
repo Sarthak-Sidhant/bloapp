@@ -1,0 +1,1 @@
+{"id":"in.gov.eci.bloapp.views.fragments.pse.PseForm8RequestFragment","shortName":"PseForm8RequestFragment","kind":"fragment","layout":"blo_fragment_pse_form8_request","title":"Pse Form 8 Request Fragment","widgets":[{"kind":"text","label":"Generate Form 8 Requests","id":"textView3"}],"apiCalls":[],"returnsExtras":null,"onDeviceSdks":[]}

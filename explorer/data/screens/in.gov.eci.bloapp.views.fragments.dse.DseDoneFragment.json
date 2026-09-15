@@ -1,0 +1,1 @@
+{"id":"in.gov.eci.bloapp.views.fragments.dse.DseDoneFragment","shortName":"DseDoneFragment","kind":"fragment","layout":"blo_fragment_dse_done","title":"Dse Done Fragment","widgets":[{"kind":"list","label":"all apps rv","id":"all_apps_rv"}],"apiCalls":[],"returnsExtras":null,"onDeviceSdks":[]}

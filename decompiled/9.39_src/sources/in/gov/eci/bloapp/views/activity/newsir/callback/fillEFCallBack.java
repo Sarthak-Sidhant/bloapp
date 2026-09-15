@@ -1,0 +1,8 @@
+package in.gov.eci.bloapp.views.activity.newsir.callback;
+
+import in.gov.eci.bloapp.views.activity.newsir.model.EFPayload;
+
+/* JADX INFO: loaded from: /tmp/dex_9.39/classes4.dex */
+public interface fillEFCallBack {
+    void onFillEFClicked(EFPayload efPayload, String type);
+}
